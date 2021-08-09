@@ -1,0 +1,71 @@
+// l area -----------------------
+// $h_mv_relative: 71px;
+
+.l-main-visual__layer {
+  &--back {
+    padding-bottom: 650px;
+    z-index: -100;
+    // background-size: auto;
+    background-position: center center;
+    overflow: hidden;
+    // top: $h_mv_relative;
+    // margin-bottom: $h_mv_relative;
+  }
+  &--middle {
+    background-size: auto;
+    background-position: center center;
+
+  }
+  &--front {
+    display: flex;
+    justify-content: center;
+    background-size: auto;
+    background-position: center center;
+  }
+}
+
+.l-main-visual__title {
+  &-banner {
+    position: static;
+    margin-top: 80px;
+    height: 328px;
+    width: 415px;
+    border-radius: 8px;
+    padding: 42px 28px 30px;
+  }
+  &-main {
+    display: flex;
+  }
+  &-discription {
+    // padding: 18px 0 10px;
+    font-size: 16px;
+    padding: 20px 0 28px;
+    // font-weight: 900;
+    // line-height: 1.7;
+  }
+  &-btn {
+    font-size: 18px;
+    padding: 20px 38px 20px;
+  }
+}
+
+
+// p area -----------------------
+  // p-card =====================
+.p-card__list {
+  flex-flow: row;
+  margin-top: -247px;
+}
+
+.p-card {
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 10px 1.5rem; //mobile
+  }
+  &__text {
+    padding: 0 10px;
+    margin: auto;
+  }
+
+}

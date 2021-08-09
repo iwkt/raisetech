@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>RaiseTech</title>
+    <link rel="stylesheet" href="./assets/css/foundation/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div class="global-container">
+      <div id="menu">
+      <header class="header">
+        <div class="l-header__container">
+          <div class="l-header__container--pc">
+            <div class="l-header__logo">
+              <a class="l-header__logo-link" href="#"><img src="assets/images/header-logo.svg" alt=""></a>
+            </div>
+            <p class="l-header__nav-title">最速で<span>「稼げる」</span>プロになる<br>エンジニアリングスクール</p>
+            <nav class="l-header__nav">
+              <ul class="l-header__nav-list">
+                <li v-for="item in navItems" :key="item.id" class="l-header__nav-item js-hover-parent" :class="item.cssClass">
+                  <a class="l-header__nav-link" href="#">{{ item.title }}</a>
+                  <ul class="l-nav__drawer--pc-child js-hover-child">
+                    <li v-for="subitem in item.subTitle">
+                      <a class="l-nav__drawer--pc-childLink" :href="subitem.url">{{ subitem.subsubtitle }}</a>
+                    </li>
+                </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        
+        <!-- <div id="js-drawer--pc" class="l-nav__drawer-container--pc">
+          <ul class="l-nav__drawer__acd--parents js-acd_parent">
+            <li v-for="item in navItems" :key="item.sn">
+              <a class="l-nav__drawer__acd--parent js-acd_parent"><i class="far fa-laugh-squint"></i>{{ item.title }}</a>
+              <ul class="l-nav__drawer__acd--child js-acd_child">
+                <li v-for="subitem in item.subTitle"><a :href="subitem.url"><i class="far fa-kiss-wink-heart"></i>{{ subitem.subsubtitle }}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> -->
+
+        <div id="js-drawer--mobile" class="l-nav__drawer-container--mobile">
+          <ul class="l-nav__drawer__acd--parents js-acd_parent">
+            <li v-for="item in navItems" :key="item.sn">
+              <a class="l-nav__drawer__acd--parent js-acd_parent"><i class="far fa-laugh-squint"></i>{{ item.title }}</a>
+              <ul class="l-nav__drawer__acd--child js-acd_child">
+                <li v-for="subitem in item.subTitle"><a :href="subitem.url"><i class="far fa-kiss-wink-heart"></i>{{ subitem.subsubtitle }}</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="l-header__container--mobile">
+            <div class="l-header__logo">
+              <a class="l-header__logo-link" href="#"><img src="assets/images/header-logo.svg" alt=""></a>
+            </div>
+
+
+          <nav class="l-mobile__nav">
+            <!-- hamburger menu ここから-->
+            <div id="abc" class="mbl__nav">
+              <button id="navOpen" class="nav_open">
+                <div></div>
+                <div></div>
+                <div></div>
+              </button>
+            </div>
+            <!-- hamburger menu ここまで-->
+          </nav>
+
+
+        </div>
+      </div>
+    </div><!-- menu -->
+        
+        <section class="l-main-visual">
+          <div class="l-main-visual__layer">
+            <div class="l-main-visual__layer--back">
+              <div class="l-main-visual__layer--middle"></div>
+              <div class="l-main-visual__layer--front">
+                <div class="l-main-visual__title-banner">
+                  <div class="l-main-visual__title-main">
+                    <h1><img class="l-main-visual__title-logo" src="./assets/images/header-logo.svg" alt=""></h1>
+                  </div>
+                  <div class="l-main-visual__title-discription">
+                    <p>はじめまして。RaiseTech（レイズテック）は<br> 最速で「稼げる」エンジニアになるための、<br> 実践的なWebエンジニアリングスクールです</p>
+                  </div>
+                  <button class="l-main-visual__title-btn c-button--mint">マンガでわかるRaiseTech</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <div id="appCard">
+          <div class="p-card">
+            <div class="p-card__container">
+              <ul class="p-card__list">
+                <li v-for="item in items" :key="item.id" class="p-card__item">
+                  <div class="u-center--v-h p-card__pict--circle u-mb--s">
+                    <i class="c-card__icon fa-6x" :class="item.iconUrl "></i>
+                  </div>
+                  <div class="p-card__text">
+                    <div class="c-card__title  u-mb--10">{{ item.title }}</div>
+                    <div class="u-center--horizontal p-card__text--left">  
+                      <div class="c-card__description">{{item.description}}</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <!-- appCard -->
+  </div><!--global-container--> 
+  <div class="test" style="margin-bottom: 1000px;"></div>
+  <p>aaa</p>
+
+      </header>
+      
+      <script src="./assets/js/card.js"></script>
+      <script src="./assets/js/menu.js"></script>
+      <script src="./assets/js/hmgr.js"></script>
+      <script src="./assets/js/hover.js"></script>
+      <script src="./assets/js/acd.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+  </body>
+</html>

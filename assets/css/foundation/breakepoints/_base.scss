@@ -1,0 +1,28 @@
+@import "../../layout/_l-nav.scss";
+@import "../../layout/_l-header.scss";
+@import "../../Object/component/c-card";
+@import "../../Object/component/c-button";
+@import "../../Object/project/p-card";
+@import "../../Object/project/p-button";
+@import "../../Object/utility/utility";
+
+
+
+  html {
+    font-size: 16px;
+  }
+
+.l-header__container--pc {
+  display: none;
+}
+
+.l-main-visual__title-main {
+  display: none;
+}
+
+.p-card__list {
+  flex-flow: column;
+}
+
+
+

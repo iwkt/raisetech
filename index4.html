@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+    <style>
+      .menu{
+        display:none
+      }
+      article > div { background-color: gray; height: 50px; width: 100px;}
+
+      article:hover>.name+.menu{display:block}
+
+      .grid-header {
+        height: 100px !important;
+        width: 100%;
+      }
+
+      .grid-footer {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <main>
+      <article>
+        <div class="name"><p>jon</p></div>
+        <div class="menu">jonのmenu</div>
+      </article>
+      <article>
+      <div class="name"><p>smith</p></div>
+        <div class="menu">smithのmenu</div>
+      </article>
+    </main>
+
+    <div class="grid-container grid-noGutter">
+      <div class="col-8 grid-column">
+        <div class="grid-header col-12" style="background-color: pink">
+          <!-- hamburger menu ここから-->
+          <div class="mbl__nav">
+            <a id="navOpen" class="nav_open">
+              <div></div>
+              <div></div>
+              <div></div>
+            </a>
+          </div>
+          <!-- hamburger menu ここまで-->
+        </div>
+        <div
+          class="grid-body col"
+          style="background-color: #ccc; padding: 20px"
+        >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+          aperiam dolorum, quo fuga totam itaque perferendis inventore facere
+          illum est consectetur aut atque consequatur fugiat velit sit! Officia,
+          earum tempora.Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Natus aperiam dolorum, quo fuga totam itaque perferendis
+          inventore facere illum est consectetur aut atque consequatur fugiat
+          velit sit! Officia, earum tempora.Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Natus aperiam dolorum, quo fuga totam
+          itaque perferendis inventore facere illum est consectetur aut atque
+          consequatur fugiat velit sit! Officia, earum tempora.Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Natus aperiam dolorum,
+          quo fuga totam itaque perferendis inventore facere illum est
+          consectetur aut atque consequatur fugiat velit sit! Officia, earum
+          tempora.Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Natus aperiam dolorum, quo fuga totam itaque perferendis inventore
+          facere illum est consectetur aut atque consequatur fugiat velit sit!
+          Officia, earum tempora.Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Natus aperiam dolorum, quo fuga totam itaque
+          perferendis inventore facere illum est consectetur aut atque
+          consequatur fugiat velit sit! Officia, earum tempora.
+        </div>
+      </div>
+      <div
+        class="grid-side col-4"
+        style="background-color: #333; color: #fff; padding: 10px"
+      >
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+          aperiam dolorum, quo fuga totam itaque perferendis inventore facere
+          illum est consectetur aut atque consequatur fugiat velit sit! Officia,
+          earum tempora.Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Natus aperiam dolorum, quo fuga totam itaque perferendis
+          inventore facere illum est consectetur aut atque consequatur fugiat
+          velit sit! Officia, earum tempora.Lorem ipsum dolor, sit amet
+          consectetur adipisicing elit. Natus aperiam dolorum, quo fuga totam
+          itaque perferendis inventore facere illum est consectetur aut atque
+          consequatur fugiat velit sit! Officia, earum tempora.Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Natus aperiam dolorum,
+          quo fuga totam itaque perferendis inventore facere illum est
+          consectetur aut atque consequatur fugiat velit sit! Officia,.
+        </p>
+      </div>
+      <div class="grid-footer col-12" style="background-color: gold"></div>
+    </div>
+
+    <div class="col grid-column-equalHeight">
+      <div class="col grid-equalHeight">
+        <div class="col grid-column-equalHeight">
+          <div class="col">
+            <div class="demo demo-left" style="background-color: green">
+              <p>
+                <strong>Top box</strong><br />
+                Lorem ipsum
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="demo demo-left" style="background-color: greenyellow">
+              <p>
+                <strong>Middle box</strong><br />
+                Lorem ipsum
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="demo demo-left" style="background-color: pink">
+              <p>
+                <strong>Bottom box</strong><br />
+                Lorem ipsum
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="demo demo-left" style="background-color: red">
+            <p>
+              <strong>Center box</strong><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              semper diam at erat pulvinar, at pulvinar felis blandit.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="demo demo-left" style="background-color: purple">
+          <p>
+            <strong>Wide box</strong><br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+            ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas
+            non massa sem. Etiam finibus odio quis feugiat facilisis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/hmgr.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+$width-s: 20px;
+$h-nav: 70px;
+
+.l-header__container {
+  & .l-header__nav-title {
+    display: block;
+  }
+}
+.l-header__logo {
+  padding-left: 0;
+}
+
+
+// p area -----------------------
+  // p-card =====================
+.p-card__list {
+  flex-flow: row;
+  margin-top: -247px;
+}
+
+.p-card {
+  &__text {
+    width: 230px;
+    padding: 0;
+  }
+}

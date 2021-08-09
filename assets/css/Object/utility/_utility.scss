@@ -1,0 +1,27 @@
+.u-center {
+  display: flex;
+  &--vertical {
+    @extend .u-center;
+    align-items: center;
+  }
+  &--horizontal {
+    @extend .u-center;
+    justify-content: center;
+  }
+  &--v-h {
+    @extend .u-center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.u-mb--s {
+  margin-bottom: 7px;
+}
+.u-mb--m {
+  margin-bottom: 50px;
+}
+
+.u-mb--10 {
+  margin-bottom: 10px;
+}

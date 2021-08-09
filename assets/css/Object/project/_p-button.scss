@@ -1,0 +1,24 @@
+// .p-button {
+//   appearance: none;
+//   display: inline-block;
+//   border: none;
+//   margin: 0;
+//   text-align: center;
+//   line-height: 1;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+.p-button {
+  &--contact {
+    padding: 0 15px;
+    color: #fff;
+    background-color: #2598B3;
+  }
+  &--description {
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+
+  }
+}

@@ -1,0 +1,74 @@
+$h_mv: 320px;
+$h_mv_relative: 50px;
+
+
+.l-main-visual__layer--back {
+  position: relative;
+  top: $h_mv_relative;
+  margin-bottom: $h_mv_relative; //topで高さが引かれた文の埋め合わせ
+  left: 0;
+  background-image: url(../images/bg-hero3.png);
+  background-size: cover;
+  background-position: center -25px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 300px;
+  padding-bottom: 320px;
+  // overflow: hidden;
+  width: 100%;
+}
+
+.l-main-visual__layer--middle {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  background-image: url(../images/bg-hero2.png);
+  background-size: cover;
+  background-position: center -26px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.l-main-visual__layer--front {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-image: url(../images/bg-hero1.png);
+  background-size: cover;
+  background-position: center -30px;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.l-main-visual__title {
+  &-banner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 156px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+  &-main {
+    display: flex;
+    justify-content: center;
+  }
+  &-discription {
+    padding: 18px 0 10px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+  &-btn {
+    font-weight: 700;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+  &-logo {
+    height: 59px;
+  }
+}
